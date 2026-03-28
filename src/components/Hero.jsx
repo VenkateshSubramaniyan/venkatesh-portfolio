@@ -1,6 +1,6 @@
 import './Hero.css';
 import VenkateshImage from '../assets/DP3.png';
-import { FaLinkedin, FaGithub, FaMedium } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa';
 import { SiLeetcode } from "react-icons/si";
 import { Typewriter } from 'react-simple-typewriter';
 
@@ -54,6 +54,21 @@ function Hero() {
             >
               <FaGithub />
             </a>
+            <a
+              href="https://www.instagram.com/subramanyamvenkatraman/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://www.facebook.com/Venki.s.online/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook />
+            </a>
+
           </div>
         </div>
       </div>
