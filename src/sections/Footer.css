@@ -1,0 +1,47 @@
+.footer {
+  background-color: #0f172a; /* Dark navy */
+  width: 100vw;              /* Full viewport width */
+  position: relative;
+  left: 50%;                /* Shift footer left 50% */
+  right: 50%;
+  margin-left: -50vw;       /* Pull back half viewport width */
+  margin-right: -50vw;
+  padding: 2rem 1rem;
+  color: #cbd5e1;           /* Slate 300 */
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-name {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.footer-icons a {
+  color: #cbd5e1;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #6366f1; /* Indigo */
+}
+
+.footer-message {
+  font-size: 0.9rem;
+  color: #94a3b8; /* Slate 400 */
+}

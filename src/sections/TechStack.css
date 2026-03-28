@@ -1,0 +1,210 @@
+/* ============================================
+   SKILLS SECTION
+   ============================================ */
+.skills {
+  padding: 6rem 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  color: #8b5cf6;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0.5rem 0;
+}
+
+.section-divider {
+  width: 8rem;
+  height: 0.25rem;
+  background: #8b5cf6;
+  margin: 1rem auto 0;
+  border-radius: 9999px;
+}
+
+/* Skills Grid */
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Skill Category Card */
+.skill-category {
+  background: #1f2937; /* neutral grey */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Category Header */
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.category-header i {
+  font-size: 1.5rem;
+  color: inherit;
+}
+
+.category-header h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: inherit;
+}
+
+/* Skill Tags */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  color: floralwhite;
+  padding: 0.4rem 0.8rem;
+  background: #2A2D3D;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: default;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  border: 2px solid #3E4254;
+}
+
+.skill-tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.skill-icon {
+  height: 1rem;
+  width: auto;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Colors per category */
+.skill-category:nth-child(1) { color: #4BE2F2; } 
+.skill-category:nth-child(2) { color: #4BE2F2; } 
+.skill-category:nth-child(3) { color: #4BE2F2; } 
+.skill-category:nth-child(4) { color: #4BE2F2; grid-column: span 2; } 
+.skill-category:nth-child(5) { color: #4BE2F2; } 
+.skill-category:nth-child(6) { color: #4BE2F2; } 
+.skill-category:nth-child(7) { color: #4BE2F2; } 
+.skill-category:nth-child(8) { color: #4BE2F2; } 
+
+/* ============================
+   RESPONSIVE DESIGN
+   ============================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .skills-content {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+  .skill-category:nth-child(3),
+  .skill-category:nth-child(4) {
+    grid-column: span 2; /* keep wider on tablet */
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 640px) {
+  .skills-content {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+  .skill-category:nth-child(3),
+  .skill-category:nth-child(4) {
+    grid-column: span 1; /* full width on mobile */
+  }
+
+  .skill-category {
+    padding: 1rem;
+  }
+
+  .category-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .category-header i {
+    font-size: 1.25rem;
+  }
+
+  .skill-tag {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .skills {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+  }
+
+  .skill-category {
+    padding: 0.8rem;
+  }
+
+  .category-header h3 {
+    font-size: 1rem;
+  }
+
+  .category-header i {
+    font-size: 1.1rem;
+  }
+
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}

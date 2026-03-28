@@ -1,0 +1,233 @@
+/* ============================================
+   EXPERIENCE SECTION (Responsive Timeline)
+   ============================================ */
+
+.experience {
+  padding: 6rem 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-label {
+  color: #F2507B;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin: 0.5rem 0;
+}
+
+.section-divider {
+  width: 8rem;
+  height: 0.25rem;
+  background: #F2507B;
+  margin: 1rem auto 0;
+  border-radius: 9999px;
+}
+
+/* Timeline (desktop/tablet) */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 60px; /* space for timeline line */
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px; /* vertical line */
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #F2507B 0%, #a12647 100%);
+  border-radius: 9999px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 30px;
+  width: 20px;
+  height: 20px;
+  background: #F2507B;
+  border: 4px solid #111827;
+  border-radius: 50%;
+  z-index: 2;
+  top: 0;
+}
+
+.timeline-content {
+  background: #1f2937;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  width: calc(100% - 60px);
+  margin-left: 50px;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.timeline-date {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: linear-gradient(90deg, #F2507B, #a12647);
+  color: white;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.timeline-company {
+  font-size: 1.1rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.timeline-description {
+  list-style-type: disc;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  color: #d1d5db;
+}
+
+.timeline-description li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.timeline-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-pill {
+  padding: 0.4rem 0.8rem;
+  background: #374151;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #d1d5db;
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+   ============================ */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .experience {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .timeline {
+    padding-left: 40px;
+  }
+
+  .timeline-marker {
+    left: 20px;
+  }
+
+  .timeline-content {
+    width: calc(100% - 40px);
+    margin-left: 30px;
+    padding: 1.5rem;
+  }
+
+  .timeline-title {
+    font-size: 1.25rem;
+  }
+
+  .timeline-company {
+    font-size: 1rem;
+  }
+
+  .timeline-date {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Mobile: remove line and marker, stack cards */
+@media (max-width: 480px) {
+  .timeline {
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-marker {
+    display: none;
+  }
+
+  .timeline-content {
+    width: 100%;
+    margin-left: 0;
+    padding: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .timeline-title {
+    font-size: 1.1rem;
+  }
+
+  .timeline-company {
+    font-size: 0.9rem;
+  }
+
+  .timeline-date {
+    font-size: 0.75rem;
+  }
+
+  .timeline-description {
+    font-size: 0.85rem;
+  }
+
+  .tag-pill {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

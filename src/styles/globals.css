@@ -1,0 +1,121 @@
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --primary: #2b6cb0;
+  --card-bg: #f9f9f9;
+  --section-bg: #f9fafb;
+  --text-light: #6b7280;
+  --shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  --borderColor: rgb(43, 108, 176, 0.5);
+}
+
+html.dark-mode {
+  --bg: #101E2A;
+  --text: #ffffff;
+  --primary: #4BE2F2;  /* 121212, 90cdf4, 1f2937 */
+  --card-bg: #131f2a; /* Slight contrast with dark background */
+  --section-bg: #1f2937;
+  --text-light: #9ca3af;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  --borderColor: rgb(75, 226, 242, 0.5);
+}
+
+
+/* GLOBAL RESET (you MUST include this at the top of global.css) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: none !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Playfair Display', serif;
+  /* font-family: 'Poppins', sans-serif; */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: -1 !important;
+  pointer-events: none;
+}
+
+/* ===========================
+   Responsive Typography + Layout
+   =========================== */
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  a {
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+    padding: 0 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}

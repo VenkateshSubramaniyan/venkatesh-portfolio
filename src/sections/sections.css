@@ -1,0 +1,124 @@
+.techstack {
+  max-width: 1024px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  text-align: center;
+}
+
+/* .tech-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.tech-icon path {
+  fill: #1d1d1d;
+} */
+
+.techstack h2 {
+  font-weight: 600;
+  font-size: 2.1rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+}
+
+.tech-grid {
+  display: grid;
+  gap: 1.3rem;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+/* New wrapper for hex + label */
+.tech-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Honeycomb hexagon shape */
+.tech-honeycomb {
+  width: 70px;
+  height: 40px;
+  background-color: #b0d4f1; /* Light blue */
+  clip-path: polygon(
+    50% 0%,
+    93% 25%,
+    93% 75%,
+    50% 100%,
+    7% 75%,
+    7% 25%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.45rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-honeycomb:hover {
+  transform: scale(1.1);
+}
+
+/* Icon inside the hexagon */
+.tech-icon {
+  font-size: 1.6rem;
+  color: #2a73c0; /* Darker blue */
+}
+
+/* Label below the icon */
+.tech-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  user-select: none;
+}
+
+/* Original card styles (no longer needed unless reused) */
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: default;
+  padding: 0.6rem 0;
+  user-select: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.tech-card:hover,
+.tech-card:focus {
+  border-bottom: 1.5px solid var(--primary);
+  color: var(--primary);
+  outline: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .tech-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+/* Dark Mode support */
+@media (prefers-color-scheme: dark) {
+  .techstack {
+    color: var(--text-light);
+  }
+
+  .tech-label {
+    color: var(--text-secondary-light);
+  }
+
+  .tech-honeycomb {
+    background-color: #274d73; /* Darker blue honeycomb */
+  }
+
+  .tech-icon {
+    color: #70b8ff; /* Lighter icon blue */
+  }
+}
